@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.pandora.cloud</groupId>
+        <artifactId>pandora-cloud-dependencies</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.pandora.cloud</groupId>
+    <artifactId>pandora-cloud-platform</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+    </properties>
+
+    <modules>
+        <module>pandora-cloud-api</module>
+        <module>pandora-cloud-console</module>
+        <module>pandora-cloud-dashboard</module>
+        <module>pandora-cloud-data</module>
+        <module>pandora-cloud-gateway</module>
+        <module>pandora-cloud-generator</module>
+        <module>pandora-cloud-mapper</module>
+        <module>pandora-cloud-mobile</module>
+        <module>pandora-cloud-model</module>
+        <module>pandora-cloud-open</module>
+        <module>pandora-cloud-passport</module>
+        <module>pandora-cloud-portal</module>
+        <module>pandora-cloud-program</module>
+        <module>pandora-cloud-schedule</module>
+        <module>pandora-cloud-service</module>
+        <module>pandora-cloud-web</module>
+    </modules>
+
+
+    <dependencies>
+        <!-- 热部署模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- 测试模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.vaadin.external.google</groupId>
+                    <artifactId>android-json</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <!-- develop 环境 -->
+            <id>develop</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profile.active>develop</profile.active>
+                <logback.dir>./app/logs</logback.dir>
+            </properties>
+        </profile>
+        <profile>
+            <!-- preview环境 -->
+            <id>test</id>
+            <properties>
+                <profile.active>test</profile.active>
+                <logback.dir>./app/logs</logback.dir>
+            </properties>
+        </profile>
+        <profile>
+            <!-- preview环境 -->
+            <id>preview</id>
+            <properties>
+                <profile.active>preview</profile.active>
+                <logback.dir>./app/logs</logback.dir>
+            </properties>
+        </profile>
+        <profile>
+            <!-- product 环境 -->
+            <id>product</id>
+            <properties>
+                <profile.active>product</profile.active>
+                <logback.dir>./app/logs</logback.dir>
+            </properties>
+        </profile>
+    </profiles>
+</project>
