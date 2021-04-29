@@ -47,8 +47,8 @@
         <module>pandora-cloud-schedule</module>
         <!--PandoraCloud云服务Model模块-->
         <module>pandora-cloud-service</module>
-        <!--PandoraCloud云服务后台端服务-->
-        <module>pandora-cloud-business</module>
+        <!--PandoraCloud云服务Model模块-->
+        <module>pandora-cloud-manage</module>
         <!--PandoraCloud云服务Undertow启动-->
         <module>pandora-cloud-undertow</module>
         <!--PandoraCloud云服务Tomcat启动-->
@@ -68,50 +68,91 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.vaadin.external.google</groupId>
-                    <artifactId>android-json</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 
+
+    <build>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>${basedir}/src/main/resources</directory>
+                <includes>
+                    <include>application.properties</include>
+                    <include>application-${profiles.active}.properties</include>
+                    <include>spy.properties</include>
+                    <include>logback-spring.xml</include>
+                    <include>logback-spring-boot.xml</include>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <fork>true</fork>
+                    <mainClass>${start-class}</mainClass>
+                    <layout>ZIP</layout>
+                    <classifier>${profiles.active}</classifier>
+                    <executable>false</executable>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <profiles>
         <profile>
-            <!-- develop 环境 -->
             <id>develop</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <profile.active>develop</profile.active>
+                <profiles.active>develop</profiles.active>
                 <logback.dir>./app/logs</logback.dir>
             </properties>
         </profile>
         <profile>
-            <!-- preview环境 -->
             <id>test</id>
             <properties>
-                <profile.active>test</profile.active>
+                <profiles.active>test</profiles.active>
                 <logback.dir>./app/logs</logback.dir>
             </properties>
         </profile>
         <profile>
-            <!-- preview环境 -->
             <id>preview</id>
             <properties>
-                <profile.active>preview</profile.active>
+                <profiles.active>preview</profiles.active>
                 <logback.dir>./app/logs</logback.dir>
             </properties>
         </profile>
         <profile>
-            <!-- product 环境 -->
             <id>product</id>
             <properties>
-                <profile.active>product</profile.active>
+                <profiles.active>product</profiles.active>
                 <logback.dir>./app/logs</logback.dir>
+            </properties>
+        </profile>
+        <profile>
+            <id>jdk-1.8</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <jdk>[1.8,)</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.target>${java.version}</maven.compiler.target>
+                <maven.compiler.version>${java.version}</maven.compiler.version>
+                <maven.compiler.source>${java.version}</maven.compiler.source>
             </properties>
         </profile>
     </profiles>
+
 </project>
