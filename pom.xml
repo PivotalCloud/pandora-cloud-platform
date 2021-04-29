@@ -19,22 +19,40 @@
     </properties>
 
     <modules>
+        <!--PandoraCloud云服务API接口服务-->
         <module>pandora-cloud-api</module>
+        <!--PandoraCloud云服务后台端服务-->
         <module>pandora-cloud-console</module>
+        <!--PandoraCloud云服务监控端服务-->
         <module>pandora-cloud-dashboard</module>
+        <!--PandoraCloud云服务大数据端服务-->
         <module>pandora-cloud-data</module>
+        <!--PandoraCloud云服务大数据端服务-->
         <module>pandora-cloud-gateway</module>
+        <!--PandoraCloud云服务整合模块-->
         <module>pandora-cloud-generator</module>
+        <!--PandoraCloud云服务整合模块-->
+        <module>pandora-cloud-integration</module>
+        <!--PandoraCloud云服务Dao层模块-->
         <module>pandora-cloud-mapper</module>
+        <!--PandoraCloud云服务App端服务-->
         <module>pandora-cloud-mobile</module>
+        <!--PandoraCloud云服务Model模块-->
         <module>pandora-cloud-model</module>
+        <!--PandoraCloud云服务Model模块-->
         <module>pandora-cloud-open</module>
-        <module>pandora-cloud-passport</module>
-        <module>pandora-cloud-portal</module>
+        <!--PandoraCloud云服务Model模块-->
         <module>pandora-cloud-program</module>
+        <!--PandoraCloud云服务Model模块-->
         <module>pandora-cloud-schedule</module>
+        <!--PandoraCloud云服务Model模块-->
         <module>pandora-cloud-service</module>
-        <module>pandora-cloud-web</module>
+        <!--PandoraCloud云服务后台端服务-->
+        <module>pandora-cloud-business</module>
+        <!--PandoraCloud云服务Undertow启动-->
+        <module>pandora-cloud-undertow</module>
+        <!--PandoraCloud云服务Tomcat启动-->
+        <module>pandora-cloud-tomcat</module>
     </modules>
 
 
