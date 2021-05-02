@@ -6,4 +6,4 @@
  * @version 1.0.0
  * <p>Copyright © 2018-2021 Pivotal Cloud Technology Systems Incorporated. All rights reserved.<br></p>
  */
-package com.pandora.cloud.model.base.service;
+package com.pandora.cloud.model.base.entity;

@@ -84,6 +84,7 @@
                     <include>logback-spring.xml</include>
                     <include>logback-spring-boot.xml</include>
                     <include>**/*.xml</include>
+                    <include>*.txt</include>
                 </includes>
             </resource>
         </resources>
