@@ -49,10 +49,6 @@
         <module>pandora-cloud-service</module>
         <!--PandoraCloud云服务Model模块-->
         <module>pandora-cloud-manager</module>
-        <!--PandoraCloud云服务Undertow启动-->
-        <module>pandora-cloud-undertow</module>
-        <!--PandoraCloud云服务Tomcat启动-->
-        <module>pandora-cloud-tomcat</module>
     </modules>
 
 
