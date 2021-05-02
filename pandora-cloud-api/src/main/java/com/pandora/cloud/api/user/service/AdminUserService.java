@@ -1,7 +1,7 @@
 package com.pandora.cloud.api.user.service;
 
 import com.pandora.cloud.model.user.entity.AdminUser;
-import com.pandora.cloud.persistence.service.BaseService;
+import com.pandora.cloud.core.service.BaseService;
 
 /**
  * <p>封装Qicloud项目AdminUserService类.<br></p>

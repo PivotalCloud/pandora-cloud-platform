@@ -1,6 +1,6 @@
 package com.pandora.cloud.model.user.entity;
 
-import com.pandora.cloud.persistence.entity.BaseEntity;
+import com.pandora.cloud.core.entity.BaseEntity;
 import lombok.Data;
 
 /**

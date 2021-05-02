@@ -10,7 +10,7 @@
     <groupId>com.pandora.cloud</groupId>
     <artifactId>pandora-cloud-mobile</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>pandora-cloud-mobile</name>
+    <name>${project.artifactId}</name>
     <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
     <properties>
