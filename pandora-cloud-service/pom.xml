@@ -22,11 +22,6 @@
             <artifactId>pandora-cloud-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.pandora.cloud</groupId>
-            <artifactId>pandora-cloud-database</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
 
 
