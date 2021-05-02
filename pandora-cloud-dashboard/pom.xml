@@ -19,6 +19,11 @@
     <dependencies>
         <dependency>
             <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
             <artifactId>pandora-cloud-service</artifactId>
             <version>${project.version}</version>
         </dependency>
