@@ -12,7 +12,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
-    <description>Demo project for Spring Boot</description>
+    <description>PandoraCloud云服务基础管控平台</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>

@@ -18,6 +18,18 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-database</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-configuration</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-message</artifactId>
+        </dependency>
 
     </dependencies>
 

@@ -20,7 +20,30 @@
         <dependency>
             <groupId>com.pandora.cloud</groupId>
             <artifactId>pandora-cloud-api</artifactId>
-            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-middleware</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-monitor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-passport</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-payment</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pandora.cloud</groupId>
+            <artifactId>pandora-cloud-storage</artifactId>
         </dependency>
     </dependencies>
 
